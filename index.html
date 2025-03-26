@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<audio id="bg-music" autoplay loop>
+    <source src="sounds/Goo Goo Dolls - Iris (mp3cut.net).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    // Attempt to play on load
+    window.addEventListener('load', function () {
+        const music = document.getElementById('bg-music');
+        music.volume = 0.5; // Lower volume (0.0 to 1.0)
+        music.play().catch(error => {
+            console.log("Autoplay blocked, user interaction required.");
+        });
+    });
+</script>
+
+<button id="playBtn" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #ffb6c1;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 999;
+">🎶 Play Music</button>
+
+<script>
+    const playBtn = document.getElementById('playBtn');
+    const music = document.getElementById('bg-music');
+
+    playBtn.addEventListener('click', () => {
+        music.play();
+        playBtn.style.display = 'none';
+    });
+</script>
+
+
+<body>
+
+    <div class="container">
+        <!-- Card 1 -->
+        <div class="card" id="card1">
+            <div class="content">
+                <img src="pic/1.jpg" alt="Birthday Image 1">
+                <p class="wish">HAPPY BIRTHDAY LITTLE PRINCESS !!!</p>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card" id="card2">
+            <div class="content">
+                <img src="pic/2.jpg" alt="Birthday Image 2">
+                <p class="wish">Finally my wifey dah 19 tahunn. last teeen dahh</p>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card" id="card3">
+            <div class="content">
+                <img src="pic/3.jpg" alt="Birthday Image 3">
+                <p class="wish">Thank you so much for being a perfect girlfriend for me</p>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card" id="card4">
+            <div class="content">
+                <img src="pic/4.jpg" alt="Birthday Image 4">
+                <p class="wish">You are the best thing that ever happen to me sayang</p>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card" id="card5">
+            <div class="content">
+                <img src="pic/5.jpg" alt="Birthday Image 5">
+                <p class="wish">you are forever my love of my life!</p>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="card" id="card6">
+            <div class="content">
+                <img src="pic/6.jpg" alt="Birthday Image 6">
+                <p class="wish">I love you so much little princess sayang ❤️</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
